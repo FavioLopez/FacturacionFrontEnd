@@ -1,1 +1,38 @@
-<p>codigo-form works!</p>
+<form #form="ngForm" autocomplete="off">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+        </div>
+        <input name="NombresApellidos" #NombresApellidos="ngModel" [(ngModel)]="service.formData.NombresApellidos" class="form-control"
+               placeholder="Nombre completo" required>
+      </div>
+    </div>
+  
+    <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            
+          </div>
+          <input name="Celular" #Celular="ngModel" [(ngModel)]="service.formData.Celular" class="form-control"
+                 placeholder="Celular" required>
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+           
+          </div>
+          <input name="Telefono" #Telefono="ngModel" [(ngModel)]="service.formData.Telefono" class="form-control"
+                 placeholder="Telefono" required>
+        </div>
+      </div> 
+
+  
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" type="button" [disabled]="form.invalid"
+        (click)="onSubmit(form)"><i class="fas fa-database"></i> Guardar</button>
+    </div>
+  </form>
+
+
